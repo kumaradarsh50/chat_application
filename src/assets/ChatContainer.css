@@ -1,0 +1,110 @@
+.chatWrapper {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 35rem);
+  flex: 0 0 288px;
+  width: 288px;
+  min-width: 0;
+  margin-right: 4rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  transform: translateY(100%) translateY(-48px);
+
+  transition-duration: 167ms;
+  animation: fade-in 167ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+.chatContainer.expanded {
+  transform: translateY(0);
+}
+
+.chatContainer__heading {
+  width: 100%;
+  color: #fff;
+  background-color: rgb(47, 89, 228);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 24px;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chatContainer:hover .chatContainer__heading {
+  background-color: rgb(32, 62, 158);
+}
+
+.chatContainer__heading-name {
+  display: flex;
+  align-items: center;
+}
+
+.chatContainer__body-users {
+  height: calc(100vh - 35rem);
+  overflow-y: scroll;
+  background: #ffff;
+  position: relative;
+}
+
+.chatContainer__body-users_user {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.6rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.chatContainer__body-users_user span {
+  font-size: 18px;
+  color: var(--secondary-textcolor);
+}
+
+.chatContainer__body-users_user:first-child {
+  padding-top: 1rem;
+}
+.chatContainer__body-users_user:last-child {
+  padding-top: 1rem;
+}
+
+.chatContainer__body-users_user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.chatContainer__body-users_user::after {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: green;
+  border-radius: 50%;
+  margin-left: 5px;
+  position: absolute;
+  right: 10px;
+}
+
+.chatContainer__body-users_user.offline::after {
+  background-color: #ccc;
+}

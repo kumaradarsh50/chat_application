@@ -1,0 +1,221 @@
+.profile__container {
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: self-start;
+  padding: 0rem 4rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.aside__contaier {
+  background-color: rgb(57, 67, 199);
+  height: 90%;
+  width: 250px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 3rem;
+  overflow: hidden;
+}
+
+.aside__container-link {
+  border-bottom: 1px solid rgba(226, 226, 226, 0.651);
+  line-height: 2.5;
+  color: rgba(226, 226, 226, 0.651);
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.aside__container-link.active {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.aside__container-link.active::after {
+  content: ">";
+  display: inline-block;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  left: 295px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(192, 192, 192);
+}
+
+.profile__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 90%;
+}
+
+.profile__body:not(:last-child) {
+  padding: 1rem 2rem;
+}
+
+.profile__body-nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.profile__body-nav-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile__body-nav-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.profile__body-content {
+  padding: 2rem 0rem;
+  display: flex;
+  gap: 25px;
+  height: 100%;
+}
+
+.profile__body-content--left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 0rem 1rem;
+  border-right: var(--border-color-primary);
+  height: 560px;
+}
+
+.profile__body-content--left h2 {
+  padding-left: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-textcolor);
+  font-weight: 400;
+}
+
+.profile__body-content--left_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__body-content--left_heading-title {
+  color: var(--primary-textcolor);
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.profile__body-content--left img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.profile__body-content--left-form {
+  font-size: 16px;
+  display: flex;
+  line-height: 2.5;
+}
+
+.profile__body-content--left-form_label {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--secondary-textcolor);
+}
+
+.profile__body-content--left-form_label::after {
+  content: ":";
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.border {
+  border-top: var(--border-color-primary);
+  margin: 1rem;
+  padding-top: 1rem;
+}
+
+.profile__body-content--right {
+  flex: 2;
+}
+
+.profile__body-content--right h2 {
+  color: var(--secondary-textcolor);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.profile__body-content--right-form {
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.profile__body-content--right-form_label {
+  padding-left: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--secondary-textcolor);
+}
+.profile__body-content--right-form_label::after {
+  content: ":";
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.profile__body-content--right-form-mapinfo_value {
+  color: var(--primary-textcolor);
+}
+
+.profile__body-content--right-form img {
+  display: flex;
+  flex: 1;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.profile__body-content--right-form-map {
+  width: 100%;
+  height: 100%;
+  height: 400px;
+
+  border-radius: 35px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.profile__body-content--right-form-mapinfo {
+  display: flex;
+  justify-content: flex-end;
+}
+.profile__body-content--right-form-mapinfo div {
+  display: flex;
+  margin-left: 1rem;
+  padding-right: 0.5rem;
+}
+
+.profile__body-content--right-form-mapinfo {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--secondary-textcolor);
+  padding-right: 0.5rem;
+}
